@@ -1,0 +1,54 @@
+steps to run the application :
+
+---as consel in pycharm:
+   
+   1- Download DAiSEE dataset from their website: 
+       ( https://iith.ac.in/~daisee-dataset/ )
+      This dataset contains 9068 video snippets and 2,723,882 frames.  
+      We provide simple python scripts to train and evaluate the model. 
+   
+   2-Run Script Extract from from file SRC
+
+   3-Save file path and labels as NumPy arrays
+     This script takes input as a frame directory which contains all the extracted frames and label directory which should contain TrainLabels.csv, TestLabels.csv, and      ValidationLabels.csv 
+     (CSV files are available inside the downloaded DAiSEE dataset folder.)   
+     This NumPy arrays will be used in the data input pipeline. 
+
+   4- Train model  
+       This script requires pre-trained weights for ( Xception , VGG16 , NasNet )which can be downloaded from here: 
+        (https://storage.googleapis.com/tensorflow/keras-applications) 
+
+   5-Evaluate model  
+   6- Results
+      Top-1 accuracy for each class is given below.    
+      The accuracy we are showing here was measured when we extracted the frames with the default frame rate, which gave us a large number of images for testing as       compared to training and when we added two fully connected layers before the classification head.  
+
+
+|               | Accuracy  |
+|---------------|:---------:|
+| Boredom | 62.66% | 
+| Engagement | 72.17% |
+| Confusion | 63.22% |
+| Frustration | 65.55% |
+
+
+----as mopile application:
+ 
+ 1-should install android Studio
+
+ 2-Run project 
+
+ 3-create email as (Student , Instractor)
+
+ 4-shoul the sudent make vedio for him alone when he watch lectuer 
+
+ 5-choose this recourd 
+
+ 6-upload it
+
+ 7-doctor set intrval for the duration of lecture 
+ 
+ 8-after the he will see the result in list for every intrval 
+
+
+
